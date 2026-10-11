@@ -1,47 +1,890 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TECH MATRIX — Agile–DevOps Team Portfolio Website showcasing modern software development workflows, team profiles, and continuous integration concepts.">
+  <title>TECH MATRIX — Agile–DevOps Team Portfolio</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80">
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I am a Computer Science student
-        interested in web development.</p>
-    </section>
+  <!-- ========================================================================
+       1. NAVIGATION BAR (Matching Reference Images)
+       ======================================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top" id="mainNavbar">
+    <div class="container">
+      <!-- Brand Name -->
+      <a class="navbar-brand navbar-brand-custom" href="#home">
+        <span class="brand-team">TECH MATRIX</span>
+      </a>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <p>HTML, CSS, Java, Python, JavaScript</p>
-    </section>
+      <!-- Mobile Hamburger Toggler -->
+      <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <p>Personal Portfolio Website</p>
-        <p>Smart Door Security System</p>
-    </section>
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-2 my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#about">About Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#team">Team Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#workflow">Agile–DevOps Workflow</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: yourname@example.com</p>
-    </section>
+  <!-- ========================================================================
+       2. HERO SECTION (Matching Reference Image 3 & 4: Curved Horizontal Gradient)
+       ======================================================================== -->
+  <header class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">TECH MATRIX</h1>
+        <p class="hero-subtitle">
+          Building Better Software Through Agile Collaboration and DevOps Practices
+        </p>
+        <p class="hero-text">
+          A 6-member IT team exploring Agile planning, version control, continuous integration, and automated testing to understand modern software development workflows.
+        </p>
+        <div class="hero-btn-group">
+          <a href="#team" class="btn btn-hero-primary">
+            Explore Our Team
+          </a>
+          <a href="#workflow" class="btn btn-hero-secondary">
+            View Our Workflow
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <footer>
-        <p>© 2026 My Portfolio</p>
-    </footer>
+  <!-- ========================================================================
+       3. THREE FEATURE CARDS (Below Hero)
+       ======================================================================== -->
+  <div class="container features-container">
+    <div class="row g-4">
+      <!-- Feature 1 -->
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-kanban"></i>
+          </div>
+          <h3 class="feature-title">Agile Development</h3>
+          <p class="feature-description">
+            Organize work through user stories, backlogs, and sprint planning for continuous alignment.
+          </p>
+        </div>
+      </div>
+      <!-- Feature 2 -->
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+          <h3 class="feature-title">Continuous Integration</h3>
+          <p class="feature-description">
+            Understand automated build and integration workflows triggered by code commits.
+          </p>
+        </div>
+      </div>
+      <!-- Feature 3 -->
+      <div class="col-md-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="bi bi-shield-check"></i>
+          </div>
+          <h3 class="feature-title">Software Quality</h3>
+          <p class="feature-description">
+            Emphasize testing, peer collaboration, and reliable release verification.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       4. ABOUT TEAM SECTION (Matching Reference Image 3 Model)
+       ======================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About TECH MATRIX</h2>
+        <p class="section-subtitle">
+          Collaborative student developers applying modern software engineering standards.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-10">
+          <div class="about-box">
+            <p class="fs-6 text-secondary mb-4">
+              TECH MATRIX is a collaborative team of six student developers dedicated to learning and applying modern software engineering practices. Through Agile planning, Git-based version control, continuous integration concepts, and automated testing, we aim to understand how development teams build reliable software efficiently.
+            </p>
+
+            <div class="row g-3 mb-3">
+              <!-- Mission -->
+              <div class="col-md-6">
+                <div class="statement-card">
+                  <div class="statement-title">
+                    <i class="bi bi-compass text-primary"></i> Our Mission
+                  </div>
+                  <p class="statement-text">
+                    To combine teamwork, continuous learning, and modern development practices to create quality software and improve our development workflow.
+                  </p>
+                </div>
+              </div>
+              <!-- Vision -->
+              <div class="col-md-6">
+                <div class="statement-card">
+                  <div class="statement-title">
+                    <i class="bi bi-eye text-primary"></i> Our Vision
+                  </div>
+                  <p class="statement-text">
+                    To become skilled software professionals capable of collaborating effectively and delivering reliable, maintainable applications.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Problem Statement Quote -->
+            <div class="project-statement-quote">
+              <strong>Academic Project Statement:</strong> &ldquo;Design and implement an Agile–DevOps workflow for a real-world software development project of your choice by integrating Agile planning, version control, continuous integration and automated testing using innovative tools such as GitHub, Jenkins, GitHub Actions or Jira. Demonstrate the automated workflow and explain how the adopted practices improve software quality, team collaboration and delivery efficiency.&rdquo;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. TEAM MEMBERS SECTION (EXACT MATCH to Reference Image 2 Model)
+       ======================================================================== -->
+  <section class="team-section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Team Members</h2>
+        <p class="section-subtitle">Six Members. One Team. One Goal.</p>
+      </div>
+
+      <!-- Grid of 6 Cards Matching Image 2 Model -->
+      <div class="row g-4">
+
+        <!-- Card 1: Swathi K -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-card-model">
+            <h3 class="member-name">Swathi K</h3>
+            <div class="member-email">Product Owner</div>
+            <p class="member-bio">
+              Leads the product vision, prioritizes requirements, and ensures the team delivers value aligned with business goals and user needs.
+            </p>
+
+            <div class="member-section-label">Skills</div>
+            <ul class="member-bullet-list">
+              <li>Product Strategy</li>
+              <li>Requirement Analysis</li>
+              <li>Stakeholder Communication</li>
+              <li>Agile Prioritization</li>
+              <li>Business Value Mapping</li>
+            </ul>
+
+            <div class="member-section-label">Certifications</div>
+            <ul class="member-bullet-list">
+              <li>Agile Product Ownership</li>
+              <li>Business Analysis Fundamentals</li>
+              <li>Scrum Essentials</li>
+              <li>Stakeholder Management</li>
+            </ul>
+
+            <div class="member-role-footer">
+              <span class="member-role-label">Project Role:</span>
+              <span class="member-role-value">Product Owner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Harini E -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-card-model">
+            <h3 class="member-name">Harini E</h3>
+            <div class="member-email">Scrum Master 1</div>
+            <p class="member-bio">
+              Facilitates Agile ceremonies, removes blockers, and helps the team stay aligned, focused, and productive across each sprint.
+            </p>
+
+            <div class="member-section-label">Skills</div>
+            <ul class="member-bullet-list">
+              <li>Scrum Facilitation</li>
+              <li>Team Coordination</li>
+              <li>Risk Management</li>
+              <li>Agile Planning</li>
+              <li>Retrospectives</li>
+            </ul>
+
+            <div class="member-section-label">Certifications</div>
+            <ul class="member-bullet-list">
+              <li>Certified Scrum Practitioner</li>
+              <li>Agile Leadership</li>
+              <li>Team Facilitation</li>
+              <li>Project Coordination</li>
+            </ul>
+
+            <div class="member-role-footer">
+              <span class="member-role-label">Project Role:</span>
+              <span class="member-role-value">Scrum Master 1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Riffat Fathima -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-card-model">
+            <h3 class="member-name">Riffat Fathima S</h3>
+            <div class="member-email">Scrum Master 2</div>
+            <p class="member-bio">
+              Supports sprint execution, improves team collaboration, and ensures smooth delivery through continuous process improvement and effective communication.
+            </p>
+
+            <div class="member-section-label">Skills</div>
+            <ul class="member-bullet-list">
+              <li>Agile Coaching</li>
+              <li>Process Improvement</li>
+              <li>Team Support</li>
+              <li>Workflow Tracking</li>
+              <li>Meeting Facilitation</li>
+            </ul>
+
+            <div class="member-section-label">Certifications</div>
+            <ul class="member-bullet-list">
+              <li>Scrum Foundations</li>
+              <li>Agile Methodologies</li>
+              <li>Project Planning</li>
+              <li>Team Collaboration</li>
+            </ul>
+
+            <div class="member-role-footer">
+              <span class="member-role-label">Project Role:</span>
+              <span class="member-role-value">Scrum Master 2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Kowshick R -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-card-model">
+            <h3 class="member-name">Kowshick R</h3>
+            <div class="member-email">Developer-1</div>
+            <p class="member-bio">
+              Develops core features, contributes to implementation decisions, and works closely with the team to build reliable software solutions.
+            </p>
+
+            <div class="member-section-label">Skills</div>
+            <ul class="member-bullet-list">
+              <li>Frontend Development</li>
+              <li>JavaScript</li>
+              <li>HTML &amp; CSS</li>
+              <li>Problem Solving</li>
+              <li>Code Review</li>
+            </ul>
+
+            <div class="member-section-label">Certifications</div>
+            <ul class="member-bullet-list">
+              <li>Web Development Essentials</li>
+              <li>JavaScript Fundamentals</li>
+              <li>Responsive Design</li>
+              <li>Git &amp; GitHub</li>
+            </ul>
+
+            <div class="member-role-footer">
+              <span class="member-role-label">Project Role:</span>
+              <span class="member-role-value">Developer-1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Niglesh Surendar K S -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-card-model">
+            <h3 class="member-name">Niglesh Surendar K S</h3>
+            <div class="member-email">Developer-2</div>
+            <p class="member-bio">
+              Creates scalable software components, collaborates on technical implementation, and supports continuous delivery with a strong engineering mindset.
+            </p>
+
+            <div class="member-section-label">Skills</div>
+            <ul class="member-bullet-list">
+              <li>Backend Development</li>
+              <li>Java</li>
+              <li>API Integration</li>
+              <li>Testing Support</li>
+              <li>Deployment Readiness</li>
+            </ul>
+
+            <div class="member-section-label">Certifications</div>
+            <ul class="member-bullet-list">
+              <li>Java Programming</li>
+              <li>GitHub Workflow</li>
+              <li>API Development</li>
+              <li>DevOps Foundations</li>
+            </ul>
+
+            <div class="member-role-footer">
+              <span class="member-role-label">Project Role:</span>
+              <span class="member-role-value">Developer-2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6: Vedha P -->
+        <div class="col-lg-6 col-md-6">
+          <div class="team-card-model">
+            <h3 class="member-name">Vedha P</h3>
+            <div class="member-email">QA / Tester</div>
+            <p class="member-bio">
+              Ensures software quality through structured validation, bug detection, regression checks, and continuous improvement of the delivery process.
+            </p>
+
+            <div class="member-section-label">Skills</div>
+            <ul class="member-bullet-list">
+              <li>Manual Testing</li>
+              <li>Test Case Design</li>
+              <li>Bug Reporting</li>
+              <li>Regression Testing</li>
+              <li>Quality Assurance</li>
+            </ul>
+
+            <div class="member-section-label">Certifications</div>
+            <ul class="member-bullet-list">
+              <li>Software Testing Basics</li>
+              <li>QA Methodologies</li>
+              <li>Agile Quality</li>
+              <li>Defect Tracking</li>
+            </ul>
+
+            <div class="member-role-footer">
+              <span class="member-role-label">Project Role:</span>
+              <span class="member-role-value">QA / Tester</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. AGILE–DEVOPS WORKFLOW SECTION
+       ======================================================================== -->
+  <section class="workflow-section" id="workflow">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Our Agile–DevOps Workflow</h2>
+        <p class="section-subtitle">
+          From planning to testing through a structured development process.
+        </p>
+      </div>
+
+      <!-- Visual Pipeline Sequence Bar -->
+      <div class="workflow-ribbon">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="h6 fw-bold mb-0 text-dark">
+            <i class="bi bi-diagram-3 text-primary me-2"></i>Development Lifecycle
+          </h4>
+          <span class="small text-muted">Plan &rarr; Code &rarr; Commit &rarr; Build &rarr; Test &rarr; Review &rarr; Deliver</span>
+        </div>
+
+        <div class="pipeline-steps-wrapper">
+          <div class="pipeline-step-item active">
+            <div class="pipeline-step-circle">1</div>
+            <span class="pipeline-step-name">Plan</span>
+          </div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-step-item">
+            <div class="pipeline-step-circle">2</div>
+            <span class="pipeline-step-name">Code</span>
+          </div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-step-item">
+            <div class="pipeline-step-circle">3</div>
+            <span class="pipeline-step-name">Commit</span>
+          </div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-step-item">
+            <div class="pipeline-step-circle">4</div>
+            <span class="pipeline-step-name">Build</span>
+          </div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-step-item">
+            <div class="pipeline-step-circle">5</div>
+            <span class="pipeline-step-name">Test</span>
+          </div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-step-item">
+            <div class="pipeline-step-circle">6</div>
+            <span class="pipeline-step-name">Review</span>
+          </div>
+          <div class="pipeline-connector"></div>
+          <div class="pipeline-step-item">
+            <div class="pipeline-step-circle">7</div>
+            <span class="pipeline-step-name">Deliver</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Educational Note -->
+      <div class="alert alert-light border d-flex align-items-center gap-3 mb-4 rounded-2" role="alert">
+        <i class="bi bi-info-circle text-primary fs-5"></i>
+        <div class="small text-secondary">
+          <strong>Illustrative Workflow Model:</strong> These are educational workflow descriptions demonstrating Agile–DevOps lifecycle practices and stages for academic presentation.
+        </div>
+      </div>
+
+      <!-- 6 Workflow Steps -->
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="workflow-step-card">
+            <div class="step-card-num">Stage 01</div>
+            <h3 class="step-card-title">Step 1: Agile Planning</h3>
+            <ul class="step-bullet-list">
+              <li>Create a product backlog.</li>
+              <li>Define user stories.</li>
+              <li>Prioritize tasks.</li>
+              <li>Plan sprint activities.</li>
+            </ul>
+            <div class="step-tool-tag">Suggested Tool: Jira or GitHub Projects</div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="workflow-step-card">
+            <div class="step-card-num">Stage 02</div>
+            <h3 class="step-card-title">Step 2: Version Control</h3>
+            <ul class="step-bullet-list">
+              <li>Maintain project source code in a GitHub repository.</li>
+              <li>Use feature branches.</li>
+              <li>Write meaningful commits.</li>
+              <li>Review changes through pull requests.</li>
+            </ul>
+            <div class="step-tool-tag">Tool: Git &amp; GitHub</div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="workflow-step-card">
+            <div class="step-card-num">Stage 03</div>
+            <h3 class="step-card-title">Step 3: Development</h3>
+            <ul class="step-bullet-list">
+              <li>Assign tasks to team members.</li>
+              <li>Develop website components.</li>
+              <li>Follow agreed coding conventions.</li>
+              <li>Integrate changes through Git.</li>
+            </ul>
+            <div class="step-tool-tag">Stack: HTML, CSS, JavaScript, Bootstrap</div>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="workflow-step-card">
+            <div class="step-card-num">Stage 04</div>
+            <h3 class="step-card-title">Step 4: Continuous Integration</h3>
+            <ul class="step-bullet-list">
+              <li>Automatically start workflow when code is pushed or PR is opened.</li>
+              <li>Describe the build and validation stages.</li>
+              <li>Show an illustrative CI pipeline.</li>
+              <li>Deliver fast feedback to developers.</li>
+            </ul>
+            <div class="step-tool-tag">Tool: GitHub Actions or Jenkins</div>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="workflow-step-card">
+            <div class="step-card-num">Stage 05</div>
+            <h3 class="step-card-title">Step 5: Automated Testing</h3>
+            <ul class="step-bullet-list">
+              <li>Explain unit testing, integration testing, and basic validation.</li>
+              <li>Demonstrate automated test execution.</li>
+              <li>Failed checks identify problems before integration.</li>
+              <li>Ensure regression-free code releases.</li>
+            </ul>
+            <div class="step-tool-tag">Tool: Automated Test Suites</div>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="workflow-step-card">
+            <div class="step-card-num">Stage 06</div>
+            <h3 class="step-card-title">Step 6: Review and Delivery</h3>
+            <ul class="step-bullet-list">
+              <li>Review the changes collaboratively.</li>
+              <li>Fix reported issues promptly.</li>
+              <li>Merge approved code into main.</li>
+              <li>Prepare the final website release.</li>
+            </ul>
+            <div class="step-tool-tag">Delivery: Validated Showcase Release</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive CI/CD Simulator Box -->
+      <div class="pipeline-simulator-box">
+        <div class="simulator-header">
+          <div class="simulator-title">
+            <i class="bi bi-terminal me-2 text-info"></i>ci-cd-pipeline-simulation.sh
+          </div>
+          <button id="runPipelineSimBtn" class="btn btn-sm btn-outline-info py-1 px-3">
+            <i class="bi bi-play-fill me-1"></i> Run Illustrative Simulation
+          </button>
+        </div>
+        <div id="pipelineSimStatus" class="small mb-3 text-secondary">
+          Ready for simulation walkthrough. Click the button to inspect execution stages.
+        </div>
+        <div class="simulator-grid">
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">1. Plan</div>
+            <div class="sim-node-sub">Backlog</div>
+          </div>
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">2. Code</div>
+            <div class="sim-node-sub">Branch</div>
+          </div>
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">3. Commit</div>
+            <div class="sim-node-sub">PR Opened</div>
+          </div>
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">4. Build</div>
+            <div class="sim-node-sub">Validated</div>
+          </div>
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">5. Test</div>
+            <div class="sim-node-sub">Passed</div>
+          </div>
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">6. Review</div>
+            <div class="sim-node-sub">Approved</div>
+          </div>
+          <div class="sim-node">
+            <span class="sim-node-badge">Ready</span>
+            <div class="sim-node-name">7. Deliver</div>
+            <div class="sim-node-sub">Staged</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. TOOLS AND TECHNOLOGIES SECTION
+       ======================================================================== -->
+  <section class="tools-section" id="tools">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Tools &amp; Technologies</h2>
+        <p class="section-subtitle">
+          Key technologies powering our Agile collaboration and automated delivery workflow.
+        </p>
+      </div>
+
+      <div class="row g-3">
+        <!-- Git -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-git"></i></div>
+            <div>
+              <h3 class="tool-card-title">Git</h3>
+              <p class="tool-card-desc">Distributed version control for tracking code changes and branch management.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-github"></i></div>
+            <div>
+              <h3 class="tool-card-title">GitHub</h3>
+              <p class="tool-card-desc">Cloud repository hosting, pull request reviews, and team collaboration.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jenkins -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-gear-wide-connected"></i></div>
+            <div>
+              <h3 class="tool-card-title">Jenkins</h3>
+              <p class="tool-card-desc">Automation server for orchestrating continuous integration workflows.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Actions -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-play-circle"></i></div>
+            <div>
+              <h3 class="tool-card-title">GitHub Actions</h3>
+              <p class="tool-card-desc">Automated CI/CD workflows triggered directly on code push and PRs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jira / GitHub Projects -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-kanban"></i></div>
+            <div>
+              <h3 class="tool-card-title">Jira / GitHub Projects</h3>
+              <p class="tool-card-desc">Agile planning boards for user stories, sprints, and task tracking.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HTML -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-filetype-html"></i></div>
+            <div>
+              <h3 class="tool-card-title">HTML</h3>
+              <p class="tool-card-desc">Semantic markup and document structure for the web interface.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-filetype-css"></i></div>
+            <div>
+              <h3 class="tool-card-title">CSS</h3>
+              <p class="tool-card-desc">Modern responsive styling, custom themes, and flex/grid layouts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-filetype-js"></i></div>
+            <div>
+              <h3 class="tool-card-title">JavaScript</h3>
+              <p class="tool-card-desc">Client-side interactivity, DOM manipulation, and dynamic validation.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bootstrap -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-bootstrap"></i></div>
+            <div>
+              <h3 class="tool-card-title">Bootstrap</h3>
+              <p class="tool-card-desc">Responsive component framework ensuring mobile-friendly layouts.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automated Testing -->
+        <div class="col-lg-6 col-md-6">
+          <div class="tool-card">
+            <div class="tool-icon-wrapper"><i class="bi bi-check2-square"></i></div>
+            <div>
+              <h3 class="tool-card-title">Automated Testing</h3>
+              <p class="tool-card-desc">Frameworks and validation scripts ensuring code reliability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. BENEFITS SECTION (Why Agile–DevOps?)
+       ======================================================================== -->
+  <section class="benefits-section" id="benefits">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Agile–DevOps?</h2>
+        <p class="section-subtitle">
+          How iterative planning and continuous automation improve engineering deliverables.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Benefit 1 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-shield-check"></i></div>
+            <h3 class="benefit-title">Improved Software Quality</h3>
+            <p class="benefit-text">Testing and reviews help detect issues earlier.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-people"></i></div>
+            <h3 class="benefit-title">Better Team Collaboration</h3>
+            <p class="benefit-text">Shared repositories and clear task ownership improve coordination.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-lightning-charge"></i></div>
+            <h3 class="benefit-title">Faster Delivery</h3>
+            <p class="benefit-text">Automation reduces repetitive manual steps.</p>
+          </div>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div class="col-lg-3 col-md-6">
+          <div class="benefit-card">
+            <div class="benefit-icon"><i class="bi bi-arrow-repeat"></i></div>
+            <h3 class="benefit-title">Consistent Development</h3>
+            <p class="benefit-text">Version control and repeatable workflows help maintain consistency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. CONTACT SECTION (EXACT MATCH to Reference Image 1)
+       ======================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-container">
+        <!-- Contact Heading matching Image 1 -->
+        <h2 class="contact-title">Contact Us</h2>
+
+        <form id="contact-form" novalidate>
+          <!-- Full Name -->
+          <div class="mb-3">
+            <label for="fullName" class="form-label-ref">Full Name</label>
+            <input type="text" class="form-control-ref" id="fullName" placeholder="Your full name" required>
+            <div class="invalid-feedback-ref">Please enter your full name.</div>
+          </div>
+
+          <!-- Email address -->
+          <div class="mb-3">
+            <label for="emailAddress" class="form-label-ref">Email address</label>
+            <input type="email" class="form-control-ref" id="emailAddress" placeholder="Your email" required>
+            <div class="invalid-feedback-ref">Please enter a valid email address.</div>
+          </div>
+
+          <!-- Subject -->
+          <div class="mb-3">
+            <label for="subject" class="form-label-ref">Subject</label>
+            <input type="text" class="form-control-ref" id="subject" placeholder="Subject" required>
+            <div class="invalid-feedback-ref">Please enter a subject line.</div>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-4">
+            <label for="message" class="form-label-ref">Message</label>
+            <textarea class="form-control-ref" id="message" rows="6" placeholder="Write your message here" required></textarea>
+            <div class="invalid-feedback-ref">Please enter your message (at least 10 characters).</div>
+          </div>
+
+          <!-- Send Message full-width button matching Image 1 -->
+          <button type="submit" class="btn-send-message" id="submitBtn">
+            Send Message
+          </button>
+        </form>
+
+        <!-- Feedback Alert Box -->
+        <div id="contact-alert" class="contact-alert-box" role="alert"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. FOOTER
+       ======================================================================== -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+        <div class="col-lg-5 col-md-6">
+          <div class="footer-brand">TECH MATRIX</div>
+          <p class="footer-tagline">Agile Collaboration. DevOps Practices. Quality Software.</p>
+          <p class="footer-desc">
+            Academic Agile–DevOps workflow showcase developed by a student team.
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6">
+          <h4 class="footer-nav-title">Quick Links</h4>
+          <ul class="footer-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Team</a></li>
+            <li><a href="#team">Team Members</a></li>
+            <li><a href="#workflow">Agile–DevOps Workflow</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-6">
+          <h4 class="footer-nav-title">Practices</h4>
+          <ul class="footer-nav-links">
+            <li><a href="#workflow">Agile Sprints</a></li>
+            <li><a href="#workflow">Git Branching</a></li>
+            <li><a href="#workflow">Continuous Integration</a></li>
+            <li><a href="#workflow">Automated Testing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>&copy; <span id="current-year">2026</span> TECH MATRIX. All rights reserved.</div>
+        <div class="text-secondary small">Academic Portfolio Model Showcase</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTopBtn" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="js/script.js"></script>
 </body>
 </html>
